@@ -18,4 +18,7 @@
     .sidebar-menu{
         @apply p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer text-gray-500 hover:text-white hover:bg-blue-800
     }
+    .swiper{
+        @apply h-96 w-full rounded-t-lg object-cover md:h-auto md:w-72 md:rounded-none md:rounded-l-lg
+    }
 }

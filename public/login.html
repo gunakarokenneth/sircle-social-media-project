@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- <script src="./tailwind3.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -15,10 +17,30 @@
 <body class="bg-graybg-sr font-[Poppins]">
     <div class="flex justify-center pt-20 ">
         <div class="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
-          <img
+          <!-- <img
             class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-72 md:rounded-none md:rounded-l-lg"
             src="../public/login-picture.png"
-            alt="" />
+            alt="" /> -->
+            <div class="swiper">
+                <div class="slide-content">
+                    <div class="swiper-wrapper md:w-72">
+                      <div class="swiper-slide">
+                          <img class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-72 md:rounded-none md:rounded-l-lg" src="../public/college_student_4.jpg"alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                          <img class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-72 md:rounded-none md:rounded-l-lg" src="../public/college_student_2.jpg"alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                          <img class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-72 md:rounded-none md:rounded-l-lg" src="../public/college_student_3.jpg"alt="" />
+                      </div>
+                      ...
+                    </div>  
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-button-next"></div> -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
           <div class="flex flex-col justify-start p-6">
             <h5
               class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
@@ -26,27 +48,48 @@
             </h5>
             <form action="" class="pb-5">
                 <input type="text" name="username" placeholder="university email" autocomplete="off" aria-label="university email"
-                    class="px-3 py-2 ml-3 font-normal placeholder-gray-sr placeholder:text-sm text-black rounded-lg border-none ring-2
+                    class="px-3 py-2 ml-3 font-normal placeholder-gray-sr placeholder:text-sm text-black rounded-lg border-none ring-1
                     ring-gray-sr focus:ring-gray-sr focus:ring-2 w-11/12 h-8">
             </form>
             <form action="" class="pb-5">
                 <input type="password" name="username" placeholder="university password" autocomplete="off" aria-label="university password"
-                    class="px-3 py-2 ml-3 font-normal placeholder-gray-sr placeholder:text-sm text-black rounded-lg border-none ring-2
+                    class="px-3 py-2 ml-3 font-normal placeholder-gray-sr placeholder:text-sm text-black rounded-lg border-none ring-1
                     ring-gray-sr focus:ring-gray-sr focus:ring-2 w-11/12 h-8">
             </form>
             <div class="flex justify-center space-x-2">
                 <button
-                  type="button"
-                  class=" w-11/12 inline-block rounded bg-blue-sr px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal 
+                  type="submit"
+                  class=" w-11/12 inline-block rounded bg-blue-sr px-6 pt-2.5 pb-2 text-sm font-medium leading-normal 
                   text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 
                   hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 
                   focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0">
-                  Button
+                  <p class="font-semibold">Login</p>
+                </button>
+              </div>
+              <div class="flex justify-center space-x-2">
+                <button type="submit" class="text-blue-sr font-medium background-transparent px-3 py-1 pt-5 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                    Forgot Password?
                 </button>
               </div>
           </div>
         </div>
     </div>
     <p class="text-graybar-sr font-medium text-xs text-center pt-9">Copyright  @ 2023 JA - GK</p>
+
+
+    <script>
+        const swiper = new Swiper('.slide-content', {
+
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+
+          autoplay: {
+            delay: '5000',
+            disableOnInteraction: false,
+          },
+        });
+    </script>
 </body>
 </html>

@@ -13,6 +13,12 @@ module.exports = {
       },
       margin:{
         '450px':'450px'
+      },
+      width:{
+        '600px':'600px'
+      },
+      height:{
+        '300px':'300px'
       }
     },
   },
