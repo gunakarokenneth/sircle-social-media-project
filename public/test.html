@@ -1,0 +1,276 @@
+<!-- component -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- googlefonts  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+2:regular,500,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <!-- icon  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-graybg-sr font-poppins">
+    <!-- start header  -->
+    <div
+      class="fixed z-10 top-0 h-[65px] sm:h-[100px] w-full lg:w-9/12 lg:right-0 bg-white-sr drop-shadow-navbar flex items-center justify-between"
+    >
+      <!-- start sidebar button  -->
+      <span
+        class="relative text-black-sr text-xl left-6 cursor-pointer lg:hidden"
+        onclick="openSidebar()"
+      >
+        <i class="fi fi-rr-menu-burger"></i>
+      </span>
+      <!-- end sidebar button  -->
+
+      <!-- start search area  -->
+      <div class="search-area">
+        <i class="fi fi-rr-search w-[15px] lg:w-5 h-[15px] lg:h-5"></i>
+        <input
+          type="text"
+          placeholder="Search"
+          class="text-[14px] lg:text-base ml-2 w-[132px] lg:w-[250px] text-gray-sr bg-transparent focus:outline-none"
+        />
+      </div>
+      <!-- end search area  -->
+
+      <div class="flex items-center lg:mr-10">
+        <img
+          src="https://tecdn.b-cdn.net/img/new/avatars/2.webp"
+          class="w-[30px] lg:w-[45px] rounded-full relative right-6 cursor-pointer"
+          alt="Avatar"
+        />
+        <span class="hidden lg:block text-base font-semibold cursor-pointer"
+          >Jonathan Christian Adif Sugiarto</span
+        >
+      </div>
+    </div>
+    <!-- end header  -->
+
+    <!-- start sidebar  -->
+
+    <div
+      class="sidebar z-20 font-poppins drop-shadow-navbar fixed top-0 bottom-0 lg:left-0 p-2 w-10/12 lg:w-3/12 overflow-y-auto text-center bg-white-sr hidden lg:block"
+    >
+      <div class="text-gray-100 text-xl">
+        <div class="py-[50px] flex items-center">
+          <div
+            class="font-baloo text-center w-full font-bold text-birulogo-sr text-[56px]"
+          >
+            <span class="ml-[200px]">.</span>
+            <h1 class="text-center w-full drop-shadow-textLogo">SIRCLE</h1>
+          </div>
+
+          <i
+            class="fi fi-rr-cross-circle absolute top-5 right-5 w-5 h-5 text-birulogo-sr cursor-pointer lg:hidden"
+            onclick="openSidebar()"
+          ></i>
+        </div>
+      </div>
+
+      <div class="w-full text-left pl-10 text-black-sr">
+        <span>Menu</span>
+      </div>
+
+      <div class="mt-[15px] menu-btn">
+        <i class="fi fi-rr-world menu-icon"></i>
+        <span class="menu-name">Beranda Global</span>
+      </div>
+
+      <div class="mt-[10px] menu-btn">
+        <i class="fi fi-rr-users-alt menu-icon"></i>
+        <span class="menu-name">Beranda Prodi</span>
+      </div>
+
+      <div class="mt-[10px] menu-btn">
+        <i class="fi fi-rr-users menu-icon"></i>
+        <span class="menu-name">Beranda Teman</span>
+      </div>
+
+      <div class="mt-[10px] menu-btn">
+        <i class="fi fi-rr-bell menu-icon"></i>
+        <span class="menu-name">Notifikasi</span>
+      </div>
+
+      <div class="mt-[10px] menu-btn">
+        <i class="fi fi-rr-calendar-star menu-icon"></i>
+        <span class="menu-name">Event</span>
+      </div>
+
+      <div class="my-5 bg-gray-sr h-[1px] w-[247px] m-auto"></div>
+
+      <div class="w-full text-left pl-10 text-black-sr">
+        <span>Settings</span>
+      </div>
+
+      <div class="mt-[15px] menu-btn">
+        <i class="fi fi-rr-user menu-icon"></i>
+        <span class="menu-name">Profile</span>
+      </div>
+
+      <div class="mt-[15px] menu-btn">
+        <i class="fi fi-rr-settings-sliders menu-icon"></i>
+        <span class="menu-name">Settings</span>
+      </div>
+
+      <div class="mt-[15px] menu-btn">
+        <i class="fi fi-rr-sign-out-alt menu-icon"></i>
+        <span class="menu-name">Logout</span>
+      </div>
+
+      <div class="my-[35px] text-[10px] w-full text-left pl-12 text-black-sr">
+        <span>JA & GK 2023. All Rights Reserved.</span>
+      </div>
+    </div>
+    <!-- end sidebar  -->
+
+    <!-- start main container -->
+    <div
+      class="w-full z-0 lg:w-9/12 pb-[25px] h-fit lg:float-right mt-[65px] sm:mt-[100px] lg:mt-[100px] flex flex-row px-[15px] lg:px-[80px] pt-[25px] gap-5"
+    >
+      <!-- start area kiri  -->
+      <div class="w-full lg:w-8/12 flex flex-col gap-5">
+        <!-- start komponen post konten  -->
+        <div
+          class="w-full h-fit px-5 py-[30px] bg-white-sr rounded-[10px] drop-shadow-komponenIsi"
+        >
+          <div class="flex flex-col text-center lg:text-left">
+            <div class="font-bold text-base lg:text-xl text-black-sr">
+              <span class="text-birulogo-sr">Hi!</span>, How Are You Today?
+            </div>
+            <div class="font-semibold text-sm lg:text-base text-black-sr">
+              Let’s make an awesome post 🎉
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <!-- end komponen post konten  -->
+
+        <!-- start komponen postingan  -->
+        <div
+          class="w-full h-fit bg-white-sr px-5 py-[30px] rounded-[10px] drop-shadow-komponenIsi flex flex-col gap-5"
+        >
+          <!-- start header postingan  -->
+          <div class="flex flex-row justify-between items-start">
+            <div class="flex flex-row gap-2.5 items-center">
+              <img
+                src="https://tecdn.b-cdn.net/img/new/avatars/2.webp"
+                class="w-[45px] lg:w-[45px] rounded-full cursor-pointer"
+                alt="Avatar"
+              />
+              <div>
+                <div class="text-base font-semibold text-black-sr">
+                  Luiz Clint Harry
+                </div>
+                <div class="font-semibold text-xs text-oldgray-sr">
+                  00000078998
+                </div>
+              </div>
+            </div>
+
+            <i
+              class="fi fi-rr-bookmark w-5 h-5 pt-[5px] cursor-pointer text-oldgray-sr"
+            ></i>
+          </div>
+          <!-- end header postingan  -->
+
+          <!-- start konten caption isi postingan  -->
+          <p class="font-medium text-black-sr text-sm">
+            Halo teman-teman, saya baru saja melakukan suatu proyek yang bagus
+            menurut saya dengan memotret beberapa foto-foto pemandangan yang
+            cukup indah, berikut merupakan hasil dari foto-foto saya.
+          </p>
+          <!-- end konten caption isi postingan  -->
+
+          <!-- start komponen slider gambar postingan  -->
+          <div class="swiper mySwiper w-full h-[350px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide cursor-pointer">
+                <img
+                  src="../public/slider 1.jpg"
+                  alt="slider1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <img
+                  src="../public/slider 2.jpg"
+                  alt="slider2"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <img
+                  src="../public/slider 3.jpg"
+                  alt="slider3"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div
+              class="swiper-pagination !font-poppins !text-white-sr !bg-black-sr !bg-opacity-70 !bottom-0"
+            ></div>
+          </div>
+          <!-- end komponen slider gambar postingan  -->
+
+          <!-- start button cta postingan  -->
+
+          <!-- end button cta postingan -->
+        </div>
+        <!-- end komponen postingan  -->
+      </div>
+      <!-- end area kiri  -->
+
+      <!-- start area fixed kanan  -->
+      <div class="w-4/12 hidden lg:block">
+        <div
+          class="w-[300px] h-fit px-[35px] py-[25px] bg-white fixed drop-shadow-komponenIsi rounded-[10px]"
+        ></div>
+      </div>
+      <!-- end area fixed kanan  -->
+    </div>
+    <!-- end main container  -->
+
+    <script type="text/javascript">
+      function openSidebar() {
+        document.querySelector(".sidebar").classList.toggle("hidden");
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
